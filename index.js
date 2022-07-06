@@ -29,6 +29,12 @@ const camera = new THREE.PerspectiveCamera(60, 1.33, 0.1, 10000);
 const renderer = new THREE.WebGLRenderer({canvas: canvas});
 const scene = new THREE.Scene();
 
+// device orientation 
+window.addEventListener("devicemotion", function(event) {
+    // Process event.acceleration, event.accelerationIncludingGravity,
+    // event.rotationRate and event.interval
+}, true);
+
 const loader = new THREE.FontLoader();
 
 
