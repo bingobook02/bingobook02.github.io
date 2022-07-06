@@ -29,16 +29,9 @@ const camera = new THREE.PerspectiveCamera(60, 1.33, 0.1, 10000);
 const renderer = new THREE.WebGLRenderer({canvas: canvas});
 const scene = new THREE.Scene();
 
-// device orientation 
-window.addEventListener("deviceorientation", function(event) {
-    // process event.alpha, event.beta and event.gamma
+import {DeviceOrientationControls} from 'https://unpkg.com/three@0.126.1/examples/jsm/controls/DeviceOrientationControls.js';
 
-}, true);
-
-window.addEventListener("devicemotion", function(event) {
-    // Process event.acceleration, event.accelerationIncludingGravity,
-    // event.rotationRate and event.interval
-}, true);
+var controls = new DeviceOrientationControls(camera);
 
 const loader = new THREE.FontLoader();
 
