@@ -30,6 +30,11 @@ const renderer = new THREE.WebGLRenderer({canvas: canvas});
 const scene = new THREE.Scene();
 
 // device orientation 
+window.addEventListener("deviceorientation", function(event) {
+    // process event.alpha, event.beta and event.gamma
+
+}, true);
+
 window.addEventListener("devicemotion", function(event) {
     // Process event.acceleration, event.accelerationIncludingGravity,
     // event.rotationRate and event.interval
